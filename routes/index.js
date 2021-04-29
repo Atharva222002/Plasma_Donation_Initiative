@@ -4,7 +4,7 @@ const {getDonors, addDonor,loginDonor, getCoord,searchDonors, addBank,distDonor}
 const router = express.Router();
 
 router.get('/',(req,res)=>{
-    res.render('dashboard')
+    res.render('dashBoard')
 })
 router.get('/about',(req,res)=>{
     res.render('about')
