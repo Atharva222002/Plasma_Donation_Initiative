@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/stylesheets/finalNav.css.css">
+    <link rel="stylesheet" href="/stylesheets/search.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a href="/">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+
+            <a href="search">
+                <i class="fa fa-search"></i>
+                Search Donor
+            </a>
+            <a href="register">
+                <i class="fa fa-donate"></i>
+                Be Donor
+            </a>
+
+            <a href="/#team">
+                <i class="fas fa-users-cog"></i>
+                Team
+            </a>
+            <a href="about">
+                <i class="fa fa-crosshairs"></i>
+                Our Aim
+            </a>
+        </div>
+
+
+        <div class="t">
+            <h3 style="color:white">GIO
+                <span> Plasma</span>
+            </h3>
+        </div>
+
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+
+
+        <div class=" row py-2 px-3">
+            <form id="store-form" method="POST"
+                class="Box col-12 col-sm-10 col-md-6 col-lg-4  offset-0 offset-sm-1 offset-lg-4 offset-md-3">
+
+                <div class="form-group col-12">
+                    <label for="name">Name of Donor</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name of the Donor" />
+                </div>
+                <div class="form-group col-12">
+                    <label  for="email">Email of Donor</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email of the Donor" />
+                </div>
+
+                <div class="form-group col-12">
+                    <label  for="number">Contact Number of Donor</label>
+                    <input type="number" name="contact" id="number" class="form-control" placeholder="Contact number of the Donor" />
+                </div>
+  
+                <div class="row mx-1">
+                <div class="form-group col-6">
+                    <label for="store-id">Blood Group </label>
+                    <select  id="store-id" class="form-control" placeholder="Select Blood Gropu You're Looking For" name="bloodGroup">
+                        <option value="O+">
+                            O+
+                        </option>
+                        <option value="O-">
+                            O-
+                        </option>
+                        <option value="A+">
+                            A+
+                        </option>
+                        <option value="A-">
+                            A-
+                        </option>
+                        <option value="B+">
+                            B+
+                        </option>
+                        <option value="B-">
+                            B-
+                        </option>
+                        <option value="AB+">
+                            AB+
+                        </option>
+                        <option value="AB-">
+                            AB-
+                        </option>
+                    </select>
+                  </div>
+ 
+                 <div class="form-group col-6">
+                     <label for="age">Age </label>
+                     <input id="age" type="number" class="form-control" placeholder="Age of the Donor" name="age"/>     
+                 </div>
+                </div>
+
+                <div class="row mx-1">
+                    <div class="form-group col-6">
+                        <label for="gen">Gender of Donor</label>
+                        <select  class="form-control"  name="gender" id="gen">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Prefer">Prefer Not To Say</option>
+                        </select>
+                    </div>
+     
+                     <div class="form-group col-6">
+                         <label for="wt">Weight in Kgs </label>
+                         <input id="wt" type="number" class="form-control" placeholder="Weight of the Donor" name="weight" />     
+                     </div>
+                </div>
+
+                <div class="row mx-1">
+                    <div class="form-group col-6">
+                        <label for="date">Covid+ Date </label>
+                        <input type="date" name="dateCovidPositive" id="date" class="form-control" />
+                    </div>
+     
+                     <div class="form-group col-6">
+                         <label for="days">Days after Recovery </label>
+                         <input id="days" type="number" class="form-control" placeholder="Days after the recovery" name="daysAfterRecovery" />     
+                     </div>
+                </div>
+
+
+                <div class="row mx-1">
+                    <div class="form-group col-6">
+                        <label for="adhar">Have Adhar Card ?</label>
+                        <select  class="form-control" id="adhar" name="haveAadhar">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+     
+                     <div class="form-group col-6">
+                         <label for="report"><small>Have Doctor's Report to Donate?</small></label>
+                         <select  class="form-control"  name="haveHospitalReport" id="adhar">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                     </div>
+                </div>
+
+            
+                 <div class="form-group col-12">
+                   <label for="store-address">Your Address</label>
+                   <input type="address" id="store-address" class="form-control" placeholder="Address of Receiver" name="address"/>
+                 </div>
+                <button id="submit" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/js/dashBoard.js"></script>
+
+</html>
