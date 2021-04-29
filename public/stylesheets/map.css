@@ -1,0 +1,39 @@
+ body{
+     background-image: linear-gradient(rgba(0, 0, 0,0.651),rgba(0,0,0,0.651)) ,url("https://cdn.pixabay.com/photo/2015/10/23/16/27/background-1003262__340.jpg");
+     color: whitesmoke;
+     background-position: fixed; 
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+ }
+
+ h1{
+     color:aliceblue;
+     font-weight: 600;
+ }
+
+ h1 span{
+     color: aqua;
+ }
+ 
+ div .map{
+     border-radius: 125px;
+     box-shadow: 2px 2px 3px 2px rgb(255, 255, 255) ;
+      
+ }
+ 
+ 
+.Box{
+    background: linear-gradient(rgba(255, 255, 255, 0.15),rgba(255, 255, 255, 0.15));
+    position: absolute;
+    margin-top: 45px; 
+    box-shadow: 3px 4px 12px rgba(0,0,0,1);           
+    border-radius: 12px 5px 12px 5px;
+    color: whitesmoke; 
+    
+}
+
+.a{
+    color: #00ffcc;
+    font-weight: 500;
+}
+ 

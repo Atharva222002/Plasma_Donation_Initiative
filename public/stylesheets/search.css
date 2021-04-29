@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body{
+    min-height : 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68)) , url("https://cdn.pixabay.com/photo/2017/11/11/21/19/drink-2940555_1280.jpg");
+    background-size: 100% 100%;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+ 
+.Box{
+    background: linear-gradient(rgba(255, 255, 255, 0.15),rgba(255, 255, 255, 0.15));
+    position: absolute;
+    margin-top: 125px; 
+    box-shadow: 3px 4px 12px rgba(0,0,0,1);           
+    border-radius: 12px 5px 12px 5px;
+    color: whitesmoke; 
+    margin-bottom: 100px;
+}
+
+
+.Box label{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.176;
+    padding: 8.5px 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.Box button{
+    margin-top: 10px;
+    font-family: 'Nunito', sans-serif;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: rgb(141, 12, 155);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+.Box button:hover{
+    background: rgba(150, 247, 5,0.57);
+    border-radius: 15px;
+    color: black;
+    transition: all 0.2s linear;
+}
+ 
+label{ 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input ,select{
+    opacity: 0.65;
+}
+
+
+input:hover , select:hover ,input:focus , select:focus{
+    opacity: 1;
+    transition: 0.2s linear all;
+}

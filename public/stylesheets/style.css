@@ -1,0 +1,97 @@
+.cbox{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: linear-gradient(45deg, rgba(39, 39, 38, 0.62), rgba(39, 39, 38, 0.62)), url(
+     'https://cdn.pixabay.com/photo/2017/11/11/21/19/drink-2940555_1280.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: 100% 100%;
+    color: aliceblue;
+}
+.cbox ul .b {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.box{
+    padding-top: 145px ;
+}
+ 
+.p{
+    font-size: 47px;
+    font-weight: bold;
+    letter-spacing: 1.10px;
+}
+ 
+.cbox .btn{
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: large;
+    letter-spacing: 1.09px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+.cbox .btn:hover{
+    background: whitesmoke;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.42s linear;
+}
+
+.powered{
+    max-width: 200px;
+    position: absolute;
+    bottom: 5%;
+}
+
+.powered i{
+    font-size: 30px;
+    color: aquamarine;
+}
+
+.powered span{
+    opacity: 0.56;
+}
+
+.powered p{
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.downArrow{
+    font-size: 22px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    right: 7%;
+    bottom: 8.5%;
+    opacity: 0.5;
+}
+
+.downArrow:hover{
+    background: linear-gradient(rgba(255, 255, 255,0.122),rgba(255, 255, 255,0.122));
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.12s linear all;
+}
+
+
+@media screen and (max-width:600px){
+    .powered{
+        visibility: hidden;
+    }
+    .box{
+        padding-top: 125px;
+    }
+    .p{
+        font-size: 28px;
+    }
+    .downArrow{
+        position: absolute;
+        bottom: 2%;
+        right: 3%;
+    }
+}
