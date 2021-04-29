@@ -22,8 +22,5 @@
     "node-geocoder": "^3.25.0",
     "places.js": "^1.19.0",
     "use-places-autocomplete": "^1.9.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
   }
 }
