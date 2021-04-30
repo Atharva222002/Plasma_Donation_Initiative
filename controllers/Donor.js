@@ -15,7 +15,7 @@ exports.searchDonors = async (req, res, next) => {
     
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Server error'});
+    return res.render('success',{name : "" , err : "Server Error Try Again.....!" ,msg:""})
   }
 };
 
@@ -55,7 +55,7 @@ exports.distDonor = async (req, res, next) => {
     
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Server error'});
+    return res.render('success',{name : "" , err : "Server Error Try Again.....!" ,msg:""})
   }
 };
 
@@ -67,16 +67,14 @@ exports.addDonor = async (req, res, next) => {
   try {
     const Donor1 = await Donor.create(req.body);
 
-    return res.status(201).json({
-      success: true,
-      data: Donor1
-    });
+    return res.render('success',{name :"Congratulations"+ req.body.name , msg:"You're now registered as a Plasma Donor", err : ""})
+     
   } catch (err) {
     console.error(err);
     if (err.code === 11000) {
-      return res.status(400).json({ error: 'This Donor already exists' });
+      return res.render('success',{name : "" , err:"Already Existing Donor" , msg:""})
     }
-    res.status(500).json({ error: 'Server error' });
+    return res.render('success',{name : "" , err : "Server Error Try Again.....!" ,msg:""})
   }
 };
 
@@ -94,7 +92,7 @@ exports.addBank = async (req, res, next) => {
     if (err.code === 11000) {
       return res.status(400).json({ error: 'This Bank already exists' });
     }
-    res.status(500).json({ error: 'Server error' });
+    return res.render('success',{name : "" , err : "Server Error Try Again.....!" ,msg:""})
   }
 };
 
