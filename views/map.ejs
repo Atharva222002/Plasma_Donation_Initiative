@@ -92,17 +92,20 @@
         <form id="dist" class="Box col-12 col-sm-10 col-md-6 col-lg-4  offset-0 offset-sm-1 offset-lg-4 offset-md-3">
            <div class="form-group pt-3">
                <label for="store-id">Blood Group </label>
-               <input id="store-id" class="form-control" value="A+" readonly />
+               <input id="store-id" class="form-control" value=<%= bg %> readonly />
                    
              </div>
 
              <div class="form-group">
                <label for="maxd" style="font-size: larger;"><small>Max distance between you and donor in kms</small></label>
-               <input type="number" id="maxd" class="form-control" placeholder="Distnace in kms"/>
+               <input type="number" id="maxd" class="form-control" min="1" placeholder="Distance in kms"/>
              </div>
 
              <button type="submit" class="btn btn-primary mb-4 mt-4 col-12">Filter Donors</button>
+
         </form>
+
+        <h4 id="err" class="col-12 text-center pt-5">No Donors or Blood Banks in such short Region</h4>
     </div>
     </div>
     

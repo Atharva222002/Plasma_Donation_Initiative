@@ -62,22 +62,22 @@
 
                 <div class="form-group col-12">
                     <label for="name">Name of Donor</label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Name of the Donor" />
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name of the Donor" required/>
                 </div>
                 <div class="form-group col-12">
                     <label  for="email">Email of Donor</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email of the Donor" />
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email of the Donor" required />
                 </div>
 
                 <div class="form-group col-12">
                     <label  for="number">Contact Number of Donor</label>
-                    <input type="number" name="contact" id="number" class="form-control" placeholder="Contact number of the Donor" />
+                    <input type="number" name="contact" id="number" class="form-control" placeholder="Contact number of the Donor" required  max="9999999999" />
                 </div>
   
                 <div class="row mx-1">
-                <div class="form-group col-6">
+                <div class="form-group col-10 col-md-8 col-lg-6">
                     <label for="store-id">Blood Group </label>
-                    <select  id="store-id" class="form-control" placeholder="Select Blood Gropu You're Looking For" name="bloodGroup">
+                    <select required id="store-id" class="form-control" placeholder="Select Blood Gropu You're Looking For" name="bloodGroup">
                         <option value="O+">
                             O+
                         </option>
@@ -105,53 +105,53 @@
                     </select>
                   </div>
  
-                 <div class="form-group col-6">
+                 <div class="form-group col-10 col-md-8 col-lg-6 ">
                      <label for="age">Age </label>
-                     <input id="age" type="number" class="form-control" placeholder="Age of the Donor" name="age"/>     
+                     <input required id="age" type="number" class="form-control" placeholder="Age of the Donor" name="age" min="1"/>     
                  </div>
                 </div>
 
                 <div class="row mx-1">
-                    <div class="form-group col-6">
+                    <div class="form-group col-10 col-md-8 col-lg-6">
                         <label for="gen">Gender of Donor</label>
-                        <select  class="form-control"  name="gender" id="gen">
+                        <select required class="form-control"  name="gender" id="gen">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Prefer">Prefer Not To Say</option>
                         </select>
                     </div>
      
-                     <div class="form-group col-6">
+                     <div class="form-group col-10 col-md-8 col-lg-6">
                          <label for="wt">Weight in Kgs </label>
                          <input id="wt" type="number" class="form-control" placeholder="Weight of the Donor" name="weight" />     
                      </div>
                 </div>
 
                 <div class="row mx-1">
-                    <div class="form-group col-6">
+                    <div class="form-group col-10 col-md-8 col-lg-6">
                         <label for="date">Covid+ Date </label>
-                        <input type="date" name="dateCovidPositive" id="date" class="form-control" />
+                        <input required required type="date" name="dateCovidPositive" id="date" class="form-control" />
                     </div>
      
-                     <div class="form-group col-6">
+                     <div class="form-group col-10 col-md-8 col-lg-6">
                          <label for="days">Days after Recovery </label>
-                         <input id="days" type="number" class="form-control" placeholder="Days after the recovery" name="daysAfterRecovery" />     
+                         <input required min="20" id="days" type="number" class="form-control" placeholder="Days after the recovery" name="daysAfterRecovery" />     
                      </div>
                 </div>
 
 
                 <div class="row mx-1">
-                    <div class="form-group col-6">
+                    <div class="form-group col-10 col-md-8 col-lg-6">
                         <label for="adhar">Have Adhar Card ?</label>
-                        <select  class="form-control" id="adhar" name="haveAadhar">
+                        <select  required class="form-control" id="adhar" name="haveAadhar">
                             <option value="true">Yes</option>
                             <option value="false">No</option>
                         </select>
                     </div>
      
-                     <div class="form-group col-6">
-                         <label for="report"><small>Have Doctor's Report to Donate?</small></label>
-                         <select  class="form-control"  name="haveHospitalReport" id="adhar">
+                     <div class="form-group col-10 col-md-8 col-lg-6">
+                         <label for="report"> Have Doctor's Report to Donate? </label>
+                         <select required class="form-control"  name="haveHospitalReport" id="adhar">
                             <option value="true">Yes</option>
                             <option value="false">No</option>
                         </select>
@@ -162,8 +162,9 @@
                  <div class="form-group col-12">
                    <label for="store-address">Your Address</label>
                    <input type="address" id="store-address" class="form-control" placeholder="Address of Receiver" name="address"/>
+                   <small class="d-block pt-2" style="font-size:14px"><b>City Name Preffered</b></small>
                  </div>
-                <button id="submit" type="submit">Register</button>
+                <button style="border-radius: 4px;" class="col-12 mb-3" id="submit" type="submit">Register</button>
             </form>
         </div>
     </div>
