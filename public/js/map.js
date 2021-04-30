@@ -21,6 +21,8 @@ async function getDonors() {
     body: JSON.stringify({ bloodgroup: window.localStorage.bloodgroup})
   });
   const data = await res.json();
+ 
+
   const donors = data.data.donors.map(donor => {
     return {
       type: 'Feature',
@@ -121,6 +123,7 @@ function loadMap(list) {
 async function showList(e) {
   e.preventDefault();
     console.log("Clicked")
+    document.getElementById("err").style.display = "none"
     const res = await fetch('/showlist', {
       method: 'POST',
       headers: {
@@ -129,7 +132,28 @@ async function showList(e) {
       body: JSON.stringify({ bloodgroup: window.localStorage.bloodgroup,lng:localStorage.getItem('longitude'),lat:localStorage.getItem('latitude'),dist:InputDist.value*1000})
     });
     const data = await res.json();
-    console.log(data)
+    console.log(data);
+
+
+    
+    if(!data.data.donorslist.length && data.data.banklist.length ){
+       document.getElementById('err').textContent = "No Donors exists in such region."
+       document.getElementById("err").style.display = "block"
+    }
+
+    else if(!data.data.banklist.length && data.data.donorslist.length  ){
+      document.getElementById('err').textContent = "No Blood Banks exists in such region."
+      document.getElementById("err").style.display = "block"
+   }
+   
+   else if(!data.data.banklist.length && !data.data.donorslist.length){
+    document.getElementById('err').textContent = "Neither Blood Banks  nor Donors exists in such region."
+    document.getElementById("err").style.display = "block"
+   }
+
+    if(data.data.banklist.length || data.data.donorslist.length) {
+      
+
     let string1 = ""
     data.data.donorslist.forEach(donor => {
       string1=string1+
@@ -156,6 +180,7 @@ async function showList(e) {
       <p>Address  :   <span class="a">${bank.location.formattedAddress}</span> </p></div>`
     });
     div1.innerHTML=string
+    }
   }
   
 console.log(window.localStorage)

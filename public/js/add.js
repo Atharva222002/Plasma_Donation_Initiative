@@ -31,7 +31,7 @@ async function addStore(e) {
     if (res.status === 400) {
       throw Error('Store already exists!');
     }
-    window.location.href = 'map';
+    window.location.href = 'map/'+storeId.value;
   } catch (err) {
     alert(err);
     return;

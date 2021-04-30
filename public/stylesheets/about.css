@@ -41,6 +41,12 @@ div p{
     font-weight: 550;
 }
 
+@media screen and (max-width:660px){
+    div p{
+        font-size: 16.5px;
+    }
+}
+
 div div .c{
     text-decoration: none;
     font-size: 18px;

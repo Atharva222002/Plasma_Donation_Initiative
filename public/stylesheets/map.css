@@ -6,6 +6,11 @@
      background-repeat: no-repeat;
  }
 
+#err{
+    color: white;
+     display: none;
+}
+
  h1{
      color:aliceblue;
      font-weight: 600;
