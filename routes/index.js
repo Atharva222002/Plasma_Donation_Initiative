@@ -9,8 +9,8 @@ router.get('/',(req,res)=>{
 router.get('/about',(req,res)=>{
     res.render('about')
 })
-router.get('/map',(req,res)=>{
-    res.render('map')
+router.get('/map/:id',(req,res)=>{
+    res.render('map',{bg:req.params.id})
 })
 router.get('/register',(req,res)=>{
     res.render('register')
