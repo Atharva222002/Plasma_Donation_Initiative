@@ -16,7 +16,11 @@ router.get('/register',(req,res)=>{
     res.render('register')
 })
 router.get('/search',(req,res)=>{
-    res.render('search')
+    res.render('search',{name:"NA" , err :"U bastard", msg:"Go home"})
+})
+
+router.get('/success',(req,res)=>{
+    res.render('success/:id',{name : id})
 })
 router.post('/searchDonors',searchDonors)
 router.post('/register', addDonor)
