@@ -29,8 +29,8 @@ app.set("view engine", "ejs");
 // Routes
 app.use('/', require('./routes'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(process.env.PORT || 5000, () =>
+app.listen(process.env.PORT || 3000, () =>
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 );
